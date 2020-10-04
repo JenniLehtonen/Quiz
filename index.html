@@ -10,22 +10,30 @@
 <div id="testi">
 
 </div>
+<button id="1">Teksti</button>
+<button id="2">Toinen button</button>
   <script>
     //Question index kasvaa jokaisella vastauskerralla
     //Score kasvaa, jos vastataan oikein
 
     let quiz = [
   {
-    "question": "purple",
-    "answer": "a",
-    "registration": new Date('2017-01-03'),
-    "capacity": 7
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "options": {
+			a: 'Madrid',
+			b: 'Barcelona',
+			c: 'Malaga'
+		}
   },
   {
-    "question": "red",
-    "answer": "b",
-    "registration": new Date('2018-03-03'),
-    "capacity": 5
+    "question": "What is the capital of Switzerland?",
+    "answer": "Bern",
+    "options": {
+			a: 'Bern',
+			b: 'Zürich',
+			c: 'Basel'
+		}
   }
   ]
   var questions = [];
@@ -34,9 +42,11 @@
   questions.push(quiz[i].question);
   answers.push(quiz[i].answer);
 }
-console.log(questions);
+console.log(quiz[0]);
+console.log(questions[0]);
 console.log(answers);
-document.getElementById("testi").innerHTML=questions;
+document.getElementById("testi").innerHTML=questions[0];
+document.getElementById("1").innerHTML=questions[1];
   </script>
 </body>
 </html>
