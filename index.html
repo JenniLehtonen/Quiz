@@ -14,25 +14,28 @@
     //Question index kasvaa jokaisella vastauskerralla
     //Score kasvaa, jos vastataan oikein
 
-    let cars = [
+    let quiz = [
   {
-    "color": "purple",
-    "type": "minivan",
+    "question": "purple",
+    "answer": "a",
     "registration": new Date('2017-01-03'),
     "capacity": 7
   },
   {
-    "color": "red",
-    "type": "station wagon",
+    "question": "red",
+    "answer": "b",
     "registration": new Date('2018-03-03'),
     "capacity": 5
   }
   ]
   var questions = [];
-  for (i = 0; i < cars.length; i++) {
-  questions.push(cars[i].type);
+  var answers = [];
+  for (i = 0; i < quiz.length; i++) {
+  questions.push(quiz[i].question);
+  answers.push(quiz[i].answer);
 }
 console.log(questions);
+console.log(answers);
 document.getElementById("testi").innerHTML=questions;
   </script>
 </body>
