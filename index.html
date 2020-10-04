@@ -7,10 +7,33 @@
   <link rel="stylesheet" href="css.css">
 </head>
 <body>
+<div id="testi">
 
+</div>
   <script>
     //Question index kasvaa jokaisella vastauskerralla
     //Score kasvaa, jos vastataan oikein
+
+    let cars = [
+  {
+    "color": "purple",
+    "type": "minivan",
+    "registration": new Date('2017-01-03'),
+    "capacity": 7
+  },
+  {
+    "color": "red",
+    "type": "station wagon",
+    "registration": new Date('2018-03-03'),
+    "capacity": 5
+  }
+  ]
+  var questions = [];
+  for (i = 0; i < cars.length; i++) {
+  questions.push(cars[i].type);
+}
+console.log(questions);
+document.getElementById("testi").innerHTML=questions;
   </script>
 </body>
 </html>
