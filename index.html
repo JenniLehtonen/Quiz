@@ -10,12 +10,14 @@
 <div id="testi">
 
 </div>
-<button id="1">Teksti</button>
-<button id="2">Toinen button</button>
+<button id="1">FirstOption</button>
+<button id="2">SecondOption</button>
+<button id="3">ThirdOption</button>
+<button id="4">FourthOption</button>
   <script>
     //Question index kasvaa jokaisella vastauskerralla
     //Score kasvaa, jos vastataan oikein
-
+  var questionIndex = 0;
     let quiz = [
   {
     "question": "What is the capital of Spain?",
@@ -23,7 +25,8 @@
     "options": {
 			a: 'Madrid',
 			b: 'Barcelona',
-			c: 'Malaga'
+			c: 'Malaga',
+      d: 'Toledo'
 		}
   },
   {
@@ -45,8 +48,13 @@
 console.log(quiz[0]);
 console.log(questions[0]);
 console.log(answers);
-document.getElementById("testi").innerHTML=questions[0];
-document.getElementById("1").innerHTML=questions[1];
+
+document.getElementById("testi").innerHTML=questions[0];  //show the question
+
+document.getElementById("1").innerHTML=quiz[0].options.a;  //show the options
+document.getElementById("2").innerHTML=quiz[0].options.b;
+document.getElementById("3").innerHTML=quiz[0].options.c;
+document.getElementById("4").innerHTML=quiz[0].options.d;
   </script>
 </body>
 </html>
