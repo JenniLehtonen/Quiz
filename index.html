@@ -24,6 +24,7 @@ document.querySelectorAll("button").forEach(button => {  //kun painetaan vastaus
 
     //Question index kasvaa jokaisella vastauskerralla
     //Score kasvaa, jos vastataan oikein
+  var score = 0;
   var questionIndex = 0;
     let quiz = [
   {
@@ -93,6 +94,8 @@ function testi(e){
   console.log(e.target.innerText);
   if (e.target.innerText == answers[questionIndex]){
     console.log("oikein");
+    score++;
+    console.log(score);
   } else{
     console.log("väärin");
   }
