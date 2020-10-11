@@ -16,8 +16,7 @@
 <button id="4" class="optionButton" onclick="newQuestion()">FourthOption</button>
   <script>
 
-
-document.querySelectorAll("button").forEach(button => {
+document.querySelectorAll("button").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
   button.addEventListener('click', testi);
 });
 
@@ -78,7 +77,7 @@ document.getElementById("4").innerHTML=options[0].d;
 
 function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
   questionIndex++;
-  console.log(questionIndex);
+  console.log("QuestionIndex: " + questionIndex);
   document.getElementById("testi").innerHTML=questions[questionIndex];
 
   document.getElementById("1").innerHTML=options[questionIndex].a;  
@@ -87,8 +86,11 @@ function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvai
   document.getElementById("4").innerHTML=options[questionIndex].d;
 
 }
-function testi(){
-  alert("hello");
+function testi(e){
+  document.getElementById("1").style.backgroundColor="red";
+  console.log(e.target.innerText);
+  //console.log("button teksti: " + e.target.innerHTML);
+  console.log("tutkitaan, onko vastaus oikein");
 }
   </script>
 </body>
