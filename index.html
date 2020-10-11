@@ -10,11 +10,20 @@
 <div id="testi">
 
 </div>
-<button id="1" onclick="testi()">FirstOption</button>
-<button id="2" onclick="testi()">SecondOption</button>
-<button id="3" onclick="testi()">ThirdOption</button>
-<button id="4" onclick="testi()">FourthOption</button>
+<button id="1" class="optionButton" onclick="newQuestion()">FirstOption</button>
+<button id="2" class="optionButton" onclick="newQuestion()">SecondOption</button>
+<button id="3" class="optionButton" onclick="newQuestion()">ThirdOption</button>
+<button id="4" class="optionButton" onclick="newQuestion()">FourthOption</button>
   <script>
+    document.getElementById("1").addEventListener("click", function() {
+  testi();
+});document.getElementById("2").addEventListener("click", function() {
+  testi();
+});document.getElementById("3").addEventListener("click", function() {
+  testi();
+});document.getElementById("4").addEventListener("click", function() {
+  testi();
+});
     //Question index kasvaa jokaisella vastauskerralla
     //Score kasvaa, jos vastataan oikein
   var questionIndex = 0;
@@ -38,6 +47,16 @@
 			c: 'Basel',
       d: 'Luzern'
 		}
+  },
+  {
+    "question": "What is the capital of The United States?",
+    "answer": "Washington DC",
+    "options": {
+			a: 'New York',
+			b: 'Washington DC',
+			c: 'Los Angeles',
+      d: 'Miami'
+		}
   }
   ]
   var questions = [];
@@ -60,7 +79,7 @@ document.getElementById("2").innerHTML=options[0].b;
 document.getElementById("3").innerHTML=options[0].c;
 document.getElementById("4").innerHTML=options[0].d;
 
-function testi(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
+function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
   questionIndex++;
   console.log(questionIndex);
   document.getElementById("testi").innerHTML=questions[questionIndex];
@@ -70,6 +89,9 @@ function testi(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoeht
   document.getElementById("3").innerHTML=options[questionIndex].c;
   document.getElementById("4").innerHTML=options[questionIndex].d;
 
+}
+function testi(){
+  alert("hello");
 }
   </script>
 </body>
