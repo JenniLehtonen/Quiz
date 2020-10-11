@@ -10,11 +10,14 @@
 <div id="testi">
 
 </div>
-<button id="1" class="optionButton" onclick="newQuestion()">FirstOption</button>
-<button id="2" class="optionButton" onclick="newQuestion()">SecondOption</button>
-<button id="3" class="optionButton" onclick="newQuestion()">ThirdOption</button>
-<button id="4" class="optionButton" onclick="newQuestion()">FourthOption</button>
+<button id="1" class="optionButton" >FirstOption</button>
+<button id="2" class="optionButton" >SecondOption</button>
+<button id="3" class="optionButton" >ThirdOption</button>
+<button id="4" class="optionButton" >FourthOption</button>
+<input type="radio" id="male" name="gender" value="">
+  <label for="male">Testi</label>
 
+  <button id="change" onclick="newQuestion()">New question</button>
   <script>
 
 document.querySelectorAll("button").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
@@ -86,9 +89,11 @@ function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvai
   document.getElementById("3").innerHTML=options[questionIndex].c;
   document.getElementById("4").innerHTML=options[questionIndex].d;
 
+  document.getElementById("male").value=options[questionIndex].d;
+  console.log(document.getElementById("male").value);
+
 }
 function testi(e){
-  document.getElementById(e.target.id).style.backgroundColor="red";
   console.log(e.target.innerText);
   //console.log("button teksti: " + e.target.innerHTML);
   console.log("tutkitaan, onko vastaus oikein");
