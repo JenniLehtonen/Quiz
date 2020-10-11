@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css.css">
 </head>
 <body>
-<div id="testi">  <!--MIKÄ TÄMÄ ID ON-->
+<div id="question"> 
 
 </div>
 <button id="1" class="optionButton" >FirstOption</button>
@@ -19,7 +19,7 @@
   <script>
 
 document.querySelectorAll("button").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
-  button.addEventListener('click', testi);
+  button.addEventListener('click', checkAnswer);
 });
 
     //Question index kasvaa jokaisella vastauskerralla
@@ -71,7 +71,7 @@ console.log(questions[0]);
 console.log(answers);
 console.log(options);
 
-document.getElementById("testi").innerHTML=questions[0];  //show the question
+document.getElementById("question").innerHTML=questions[0];  //show the question
 
 document.getElementById("1").innerHTML=options[0].a;  //show the options
 document.getElementById("2").innerHTML=options[0].b;
@@ -85,7 +85,7 @@ if(questions[questionIndex]!=undefined){
 });
   questionIndex++;
   console.log("QuestionIndex: " + questionIndex);
-  document.getElementById("testi").innerHTML=questions[questionIndex];
+  document.getElementById("question").innerHTML=questions[questionIndex];
 
   document.getElementById("1").innerHTML=options[questionIndex].a;  
   document.getElementById("2").innerHTML=options[questionIndex].b;
@@ -97,7 +97,7 @@ if(questions[questionIndex]!=undefined){
   
 
 }
-function testi(e){
+function checkAnswer(e){
   console.log(answers[questionIndex])
   console.log(e.target.innerText);
   if (e.target.innerText == answers[questionIndex]){
