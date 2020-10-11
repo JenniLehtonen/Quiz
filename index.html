@@ -99,6 +99,7 @@ function testi(e){
   console.log(e.target.innerText);
   if (e.target.innerText == answers[questionIndex]){
     console.log("oikein");
+    document.getElementById(e.target.id).style.backgroundColor= "green";
     score++;
     console.log(score);
   } else{
