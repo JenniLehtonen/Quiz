@@ -35,19 +35,23 @@
     "options": {
 			a: 'Bern',
 			b: 'Zürich',
-			c: 'Basel'
+			c: 'Basel',
+      d: 'Luzern'
 		}
   }
   ]
   var questions = [];
   var answers = [];
+  var options = [];
   for (i = 0; i < quiz.length; i++) {
   questions.push(quiz[i].question);
   answers.push(quiz[i].answer);
+  options.push(quiz[i].options);
 }
 console.log(quiz[0]);
 console.log(questions[0]);
 console.log(answers);
+console.log(options);
 
 document.getElementById("testi").innerHTML=questions[0];  //show the question
 
