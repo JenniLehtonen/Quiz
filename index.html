@@ -15,7 +15,7 @@
 <button id="3" class="optionButton" >ThirdOption</button>
 <button id="4" class="optionButton" >FourthOption</button>
 
-  <button id="change" onclick="newQuestion()">New question</button>
+  <button id="newQuestionButton" onclick="newQuestion()">New question</button> 
   <script>
 
 document.querySelectorAll("button").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
@@ -80,6 +80,9 @@ document.getElementById("4").innerHTML=options[0].d;
 
 function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
 if(questions[questionIndex]!=undefined){
+  document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
+  button.style.backgroundColor="white";
+});
   questionIndex++;
   console.log("QuestionIndex: " + questionIndex);
   document.getElementById("testi").innerHTML=questions[questionIndex];
@@ -89,7 +92,7 @@ if(questions[questionIndex]!=undefined){
   document.getElementById("3").innerHTML=options[questionIndex].c;
   document.getElementById("4").innerHTML=options[questionIndex].d;
 } else{
-  document.write("Ei enää kysymyksiä");
+  document.write("Tuloksesi: " + score);
 }
   
 
@@ -98,11 +101,13 @@ function testi(e){
   console.log(answers[questionIndex])
   console.log(e.target.innerText);
   if (e.target.innerText == answers[questionIndex]){
+    document.getElementById(e.target.id).style.backgroundColor= "rgba(36, 219, 149, 0.84)";
     console.log("oikein");
-    document.getElementById(e.target.id).style.backgroundColor= "green";
     score++;
     console.log(score);
   } else{
+    document.getElementById(e.target.id).style.backgroundColor= "rgba(219, 45, 36, 0.84)";
+    document.getElementById("newQuestionButton").style.backgroundColor= "white";
     console.log("väärin");
   }
 }
