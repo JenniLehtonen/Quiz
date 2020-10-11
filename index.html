@@ -89,7 +89,13 @@ function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvai
 
 }
 function testi(e){
+  console.log(answers[questionIndex])
   console.log(e.target.innerText);
+  if (e.target.innerText == answers[questionIndex]){
+    console.log("oikein");
+  } else{
+    console.log("väärin");
+  }
   //console.log("button teksti: " + e.target.innerHTML);
   console.log("tutkitaan, onko vastaus oikein");
 }
