@@ -13,7 +13,8 @@
 <button id="1">FirstOption</button>
 <button id="2">SecondOption</button>
 <button id="3">ThirdOption</button>
-<button id="4">FourthOption</button>
+<button id="4">FourthOption</button> <br><br>
+<button id="testi" onclick="testi()">Change question</button>
   <script>
     //Question index kasvaa jokaisella vastauskerralla
     //Score kasvaa, jos vastataan oikein
@@ -55,10 +56,16 @@ console.log(options);
 
 document.getElementById("testi").innerHTML=questions[0];  //show the question
 
-document.getElementById("1").innerHTML=quiz[0].options.a;  //show the options
-document.getElementById("2").innerHTML=quiz[0].options.b;
-document.getElementById("3").innerHTML=quiz[0].options.c;
-document.getElementById("4").innerHTML=quiz[0].options.d;
+document.getElementById("1").innerHTML=options[0].a;  //show the options
+document.getElementById("2").innerHTML=options[0].b;
+document.getElementById("3").innerHTML=options[0].c;
+document.getElementById("4").innerHTML=options[0].d;
+
+function testi(){
+  questionIndex++;
+  console.log(questionIndex);
+  document.getElementById("testi").innerHTML=questions[questionIndex];
+}
   </script>
 </body>
 </html>
