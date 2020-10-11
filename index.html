@@ -60,15 +60,15 @@ document.getElementById("2").innerHTML=options[0].b;
 document.getElementById("3").innerHTML=options[0].c;
 document.getElementById("4").innerHTML=options[0].d;
 
-function testi(){
+function testi(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
   questionIndex++;
   console.log(questionIndex);
   document.getElementById("testi").innerHTML=questions[questionIndex];
 
-document.getElementById("1").innerHTML=options[questionIndex].a;  //show the options
-document.getElementById("2").innerHTML=options[questionIndex].b;
-document.getElementById("3").innerHTML=options[questionIndex].c;
-document.getElementById("4").innerHTML=options[questionIndex].d;
+  document.getElementById("1").innerHTML=options[questionIndex].a;  
+  document.getElementById("2").innerHTML=options[questionIndex].b;
+  document.getElementById("3").innerHTML=options[questionIndex].c;
+  document.getElementById("4").innerHTML=options[questionIndex].d;
 
 }
   </script>
