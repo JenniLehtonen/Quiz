@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css.css">
 </head>
 <body>
-<div id="testi">
+<div id="testi">  <!--MIKÄ TÄMÄ ID ON-->
 
 </div>
 <button id="1" class="optionButton" >FirstOption</button>
@@ -79,6 +79,7 @@ document.getElementById("3").innerHTML=options[0].c;
 document.getElementById("4").innerHTML=options[0].d;
 
 function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
+if(questions[questionIndex]!=undefined){
   questionIndex++;
   console.log("QuestionIndex: " + questionIndex);
   document.getElementById("testi").innerHTML=questions[questionIndex];
@@ -87,6 +88,10 @@ function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvai
   document.getElementById("2").innerHTML=options[questionIndex].b;
   document.getElementById("3").innerHTML=options[questionIndex].c;
   document.getElementById("4").innerHTML=options[questionIndex].d;
+} else{
+  document.write("Ei enää kysymyksiä");
+}
+  
 
 }
 function testi(e){
@@ -99,8 +104,6 @@ function testi(e){
   } else{
     console.log("väärin");
   }
-  //console.log("button teksti: " + e.target.innerHTML);
-  console.log("tutkitaan, onko vastaus oikein");
 }
   </script>
 </body>
