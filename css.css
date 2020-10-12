@@ -1,0 +1,9 @@
+body{
+    background-color:#b7e7ef94;
+    display: flex;
+    justify-content: center;
+}
+.quizArea{
+    background-color: #81CAF0;
+    width: 50%;
+}

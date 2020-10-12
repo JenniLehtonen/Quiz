@@ -7,15 +7,19 @@
   <link rel="stylesheet" href="css.css">
 </head>
 <body>
-<div id="question"> 
-
-</div>
-<button id="1" class="optionButton" >FirstOption</button>
-<button id="2" class="optionButton" >SecondOption</button>
-<button id="3" class="optionButton" >ThirdOption</button>
-<button id="4" class="optionButton" >FourthOption</button>
-
-  <button id="newQuestionButton" onclick="newQuestion()">New question</button> 
+  <div class="quizArea">
+    <div class="questionAndOptions">  <!--TARKISTA DIV-->
+    <div id="question"> 
+    </div>
+    <button id="1" class="optionButton" >FirstOption</button>
+    <button id="2" class="optionButton" >SecondOption</button><br>
+    <button id="3" class="optionButton" >ThirdOption</button>
+    <button id="4" class="optionButton" >FourthOption</button><br><br>
+    </div>
+    <div class="nextQuestion">  <!--TARKISTA DIV-->
+    <button id="newQuestionButton" onclick="newQuestion()">New question</button> 
+    </div>
+  </div>
   <script>
 
 document.querySelectorAll("button").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
