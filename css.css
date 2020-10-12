@@ -5,5 +5,14 @@ body{
 }
 .quizArea{
     background-color: #81CAF0;
-    width: 50%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+button{
+    background-color:white;
+}
+.optionButton{
+    width: 8rem;
+    height: 3rem;
 }
