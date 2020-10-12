@@ -16,3 +16,9 @@ button{
     width: 8rem;
     height: 3rem;
 }
+#question, #questionNumber{
+    text-align: center;
+}
+#newQuestionButton{
+    margin-left:100%;
+}
