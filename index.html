@@ -12,14 +12,15 @@
     <div id="questionNumber">Question 1 of 4</div>
     <div id="question"> 
     </div>
-    <button id="1" class="optionButton" >FirstOption</button>
-    <button id="2" class="optionButton" >SecondOption</button><br>
-    <button id="3" class="optionButton" >ThirdOption</button>
-    <button id="4" class="optionButton" >FourthOption</button><br>
+    <button id="b1" class="optionButton" >FirstOption</button>
+    <button id="b2" class="optionButton" >SecondOption</button><br>
+    <button id="b3" class="optionButton" >ThirdOption</button>
+    <button id="b4" class="optionButton" >FourthOption</button><br><br>
 
     <button id="newQuestionButton" onclick="newQuestion()">New question</button>
     </div>
-     
+   
+    
     
   </div>
   <script>
@@ -79,10 +80,10 @@ console.log(options);
 
 document.getElementById("question").innerHTML=questions[0];  //show the question
 
-document.getElementById("1").innerHTML=options[0].a;  //show the options
-document.getElementById("2").innerHTML=options[0].b;
-document.getElementById("3").innerHTML=options[0].c;
-document.getElementById("4").innerHTML=options[0].d;
+document.getElementById("b1").innerHTML=options[0].a;  //show the options
+document.getElementById("b2").innerHTML=options[0].b;
+document.getElementById("b3").innerHTML=options[0].c;
+document.getElementById("b4").innerHTML=options[0].d;
 
 function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
 if(questions[questionIndex]!=undefined){
@@ -93,10 +94,10 @@ if(questions[questionIndex]!=undefined){
   console.log("QuestionIndex: " + questionIndex);
   document.getElementById("question").innerHTML=questions[questionIndex];
 
-  document.getElementById("1").innerHTML=options[questionIndex].a;  
-  document.getElementById("2").innerHTML=options[questionIndex].b;
-  document.getElementById("3").innerHTML=options[questionIndex].c;
-  document.getElementById("4").innerHTML=options[questionIndex].d;
+  document.getElementById("b1").innerHTML=options[questionIndex].a;  
+  document.getElementById("b2").innerHTML=options[questionIndex].b;
+  document.getElementById("b3").innerHTML=options[questionIndex].c;
+  document.getElementById("b4").innerHTML=options[questionIndex].d;
 } else{
   document.write("Tuloksesi: " + score);
 }

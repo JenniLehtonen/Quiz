@@ -30,10 +30,23 @@ button{
 .optionButton{
     width: 8rem;
     height: 3rem;
+    cursor: pointer;
+}
+.optionButton:hover{
+    background-color: rgb(255, 134, 181);
 }
 #question, #questionNumber{
     text-align: center;
 }
 #newQuestionButton{
-    margin-left:100%;
+    cursor: pointer;
+}
+#newQuestionButton:hover{
+    background-color: pink;
+}
+#b1, #b2{
+    margin-top: 3rem;
+}
+#b3, #b4{
+    margin-top: 1rem;
 }
