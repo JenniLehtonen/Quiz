@@ -3,7 +3,6 @@ body{
     
 }
 .quizArea{
-    background-color: #81CAF0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -14,6 +13,8 @@ body{
     height: 80%;
     display: flex;
     justify-content: center;
+    background-color: #81CAF0;
+    border-radius: 25px;
 }
 .questionAndOptions{
     position: absolute;
