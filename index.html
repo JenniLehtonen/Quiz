@@ -9,7 +9,7 @@
 <body>
   <div class="quizArea">
     <div class="questionAndOptions">  <!--TARKISTA DIV-->
-    <div id="questionNumber">Question 1 of 4</div>
+    <p id="questionNumber">Question 1 of 4</p>
     <div id="question"> 
     </div>
     <button id="b1" class="optionButton" >FirstOption</button>
@@ -77,6 +77,10 @@ console.log(quiz[0]);
 console.log(questions[0]);
 console.log(answers);
 console.log(options);
+
+var questionAmount = questions.length;  //Näytetään, monesko kysymys vuorossa. Siirrä tämä muualle
+console.log(questionAmount);
+document.getElementById("questionNumber").innerHTML = questionAmount;
 
 document.getElementById("question").innerHTML=questions[0];  //show the question
 
