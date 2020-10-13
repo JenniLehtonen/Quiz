@@ -1,11 +1,17 @@
 body{
     background-color:#b7e7ef94;
-    display: flex;
-    justify-content: center;
+    
 }
 .quizArea{
     background-color: #81CAF0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     width: 70%;
+    height: 80%;
     display: flex;
     justify-content: center;
 }
