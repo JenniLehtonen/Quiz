@@ -1,5 +1,5 @@
 body{
-    background-image: url('backgroundImage.png');
+    background-image: url('test.jpg');
     background-size: cover;
 }
 .quizArea{
@@ -15,16 +15,6 @@ body{
     justify-content: center;
     background-color:rgba(255, 255, 255, 0.822);
     border-radius: 25px;
-}
-.testi{
-    
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
 }
 .questionAndOptions{
     text-align: center;
@@ -61,18 +51,7 @@ button{
 #newQuestionButton:hover{
     background-color: pink;
 }
-#b1{
-    background-color:rgba(247, 53, 85, 0.884);
-}
-#b2{
-    background-color: rgb(67,157,222);
-}
-#b3{
-    background-color: rgb(246,186,9);
-}
-#b4{
-    background-color: rgb(101,184,55);
-}
+
 .optionButton:hover{  /*HOVER EI TOIMI*/
     background-color: rgb(255, 134, 181);
 }
