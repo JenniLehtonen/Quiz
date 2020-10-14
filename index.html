@@ -9,16 +9,16 @@
 <body>
   <div class="quizArea">
     <div class="questionAndOptions">  <!--TARKISTA DIV-->
-    <p id="questionNumber">1 of 4</p>
-    <div id="question"> 
-    </div>
+    <p id="questionNumber">1 of 3</p>
+    <h1 id="question"> </h1>
+  
     <button id="b1" class="optionButton" >FirstOption</button>
     <button id="b2" class="optionButton" >SecondOption</button><br>
     <button id="b3" class="optionButton" >ThirdOption</button>
     <button id="b4" class="optionButton" >FourthOption</button><br><br>
 
     <button id="newQuestionButton" onclick="newQuestion()">New question</button>
-    </div>
+  </div>
    
     
     
@@ -94,7 +94,7 @@ if(questions[questionIndex]!=undefined){
   questionIndex++;
   var questionAmount = questions.length;  //Näytetään, monesko kysymys vuorossa. Siirrä tämä muualle
   console.log(questionAmount);
-  document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of 4";
+  document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of " + questions.length;
 
   console.log("QuestionIndex: " + questionIndex);
   document.getElementById("question").innerHTML=questions[questionIndex]; //MIKÄ TÄMÄ ON?
@@ -104,7 +104,7 @@ if(questions[questionIndex]!=undefined){
   document.getElementById("b3").innerHTML=options[questionIndex].c;
   document.getElementById("b4").innerHTML=options[questionIndex].d;
 } else{
-  document.write("Tuloksesi: " + score);
+  //document.write("Tuloksesi: " + score);  //TEE TÄLLE JOTAIN
 }
 }
 
