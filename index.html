@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css.css">
 </head>
 <body>
-  <div class="bg-image"></div>
   <div class="quizArea">
     <div class="questionAndOptions">  <!--TARKISTA DIV-->
     <p id="questionNumber">1 of 3</p>
@@ -88,12 +87,13 @@ document.getElementById("b3").innerHTML=options[0].c;
 document.getElementById("b4").innerHTML=options[0].d;
 
 function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
-if(questions[questionIndex]<=3){
+if(questions[questionIndex]!=undefined){
   document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
   button.style.backgroundColor="white";
 });
+console.log("KÄYKÖ TÄÄLLÄ KUKAAN");
   questionIndex++;
-  var questionAmount = questions.length;  //Näytetään, monesko kysymys vuorossa. Siirrä tämä muualle
+  var questionAmount = questions.length;  //Näytetään monesko kysymys vuorossa.
   console.log(questionAmount);
   document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of " + questions.length;
 
@@ -105,7 +105,7 @@ if(questions[questionIndex]<=3){
   document.getElementById("b3").innerHTML=options[questionIndex].c;
   document.getElementById("b4").innerHTML=options[questionIndex].d;
 } else{
-  console.log("testi");
+  //TEE TÄHÄN JOTAIN
 }
 }
 
