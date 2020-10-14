@@ -13,7 +13,7 @@ body{
     height: 80%;
     display: flex;
     justify-content: center;
-    background-color: #81CAF0;
+    background-color:rgba(255, 255, 255, 0.733);
     border-radius: 25px;
 }
 .questionAndOptions{
@@ -44,6 +44,18 @@ button{
 }
 #newQuestionButton:hover{
     background-color: pink;
+}
+#b1{
+    background-color:rgba(247, 53, 85, 0.884);
+}
+#b2{
+    background-color: rgb(67,157,222);
+}
+#b3{
+    background-color: rgb(246,186,9);
+}
+#b4{
+    background-color: rgb(101,184,55);
 }
 #b1, #b2{
     margin-top: 3rem;
