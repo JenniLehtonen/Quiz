@@ -11,7 +11,7 @@ body{
     transform: translateX(-50%) translateY(-50%);
     width: 70%;
     height: 80%;
-    box-shadow: 2px 2px 20px 8px rgba(254, 184, 22, 0.829);
+    box-shadow: 2px 2px 20px 2px rgba(254, 184, 22, 0.829);
     display: flex;
     justify-content: center;
     background-color:rgba(255, 255, 255, 0.884);
@@ -34,8 +34,9 @@ button{
     height: 3.5rem;
     cursor: pointer;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.904);
+    border: 1px solid rgba(254, 184, 22, 0.829);
     font-weight: 550;
+    transition-duration: 0.4s;
 }
 #question, #questionNumber{
     text-align: center;
@@ -46,15 +47,17 @@ button{
     height: 2.5rem;
     cursor: pointer;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.904);
     font-weight: 550;
+    border: 1px solid rgba(254, 184, 22, 0.829);
+    transition-duration: 0.4s;
 }
 #newQuestionButton:hover{
-    background-color: pink;
+    background-color: rgba(254, 184, 22, 0.829);
+    
 }
 
-.optionButton:hover{  /*HOVER EI TOIMI*/
-    background-color: rgb(255, 134, 181);
+.optionButton:hover{
+    background-color: rgba(254, 184, 22, 0.829);
 }
 #b1, #b2{
     margin-top: 3rem;
