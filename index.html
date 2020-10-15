@@ -8,6 +8,7 @@
 </head>
 <body>
   <div class="quizArea">
+    <div class="score"><p>jgodjsgiojl</p></div>
     <div class="questionAndOptions">  <!--TARKISTA DIV-->
     <p id="questionNumber">1 of 3</p>
     <h1 id="question"> </h1>
@@ -87,12 +88,11 @@ document.getElementById("b3").innerHTML=options[0].c;
 document.getElementById("b4").innerHTML=options[0].d;
 
 function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
+  questionIndex++;
 if(questions[questionIndex]!=undefined){
   document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
   button.style.backgroundColor="white";
 });
-console.log("KÄYKÖ TÄÄLLÄ KUKAAN");
-  questionIndex++;
   var questionAmount = questions.length;  //Näytetään monesko kysymys vuorossa.
   console.log(questionAmount);
   document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of " + questions.length;
@@ -105,7 +105,17 @@ console.log("KÄYKÖ TÄÄLLÄ KUKAAN");
   document.getElementById("b3").innerHTML=options[questionIndex].c;
   document.getElementById("b4").innerHTML=options[questionIndex].d;
 } else{
-  //TEE TÄHÄN JOTAIN
+  
+  var x = document.getElementsByClassName("questionAndOptions");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var y = document.getElementsByClassName("score");
+  var i;
+  for (i = 0; i < y.length; i++) {
+    y[i].style.display = "block";
+  }
 }
 }
 
