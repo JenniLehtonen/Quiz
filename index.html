@@ -115,6 +115,12 @@ if(questions[questionIndex]!=undefined){
   for (i = 0; i < y.length; i++) {
     y[i].style.display = "block";
   }
+  var z = document.getElementsByClassName("score");
+  var i;
+  for (i = 0; i < z.length; i++) {
+    z[i].innerHTML = "Your score is: " + score;
+  }
+  
 }
 }
 
