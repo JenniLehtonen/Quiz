@@ -51,7 +51,6 @@ document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan 
   console.log(answers);
   console.log(options);
   
-  
   document.getElementById("question").innerHTML=questions[0];  //show the question
   
   document.getElementById("b1").innerHTML=options[0].a;  //show the options
