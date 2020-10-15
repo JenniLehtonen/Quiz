@@ -5,10 +5,11 @@
   <meta http-equiv='X-UA-Compatible' content='IE-edge'>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet"> <!--Google font-->
 </head>
 <body>
   <div class="quizArea">
-    <div class="score"><p>jgodjsgiojl</p></div>
+    <h2 id="score"></h2>
     <div class="questionAndOptions">  <!--TARKISTA DIV-->
     <p id="questionNumber">1 of 3</p>
     <h1 id="question"> </h1>
@@ -110,16 +111,8 @@ if(questions[questionIndex]!=undefined){
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  var y = document.getElementsByClassName("score");
-  var i;
-  for (i = 0; i < y.length; i++) {
-    y[i].style.display = "block";
-  }
-  var z = document.getElementsByClassName("score");
-  var i;
-  for (i = 0; i < z.length; i++) {
-    z[i].innerHTML = "Your score is: " + score;
-  }
+  document.getElementById("score").style.display = "block";
+  document.getElementById("score").innerHTML = "Your score is: " + score;
   
 }
 }
