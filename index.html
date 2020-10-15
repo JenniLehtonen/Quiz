@@ -26,7 +26,7 @@
   </div>
   <script>
 
-document.querySelectorAll("button").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
+document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
   button.addEventListener('click', checkAnswer);
 });
 
@@ -105,7 +105,6 @@ if(questions[questionIndex]!=undefined){
   document.getElementById("b3").innerHTML=options[questionIndex].c;
   document.getElementById("b4").innerHTML=options[questionIndex].d;
 } else{
-  
   var x = document.getElementsByClassName("questionAndOptions");
   var i;
   for (i = 0; i < x.length; i++) {
