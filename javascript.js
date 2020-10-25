@@ -59,10 +59,11 @@ document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan 
   document.getElementById("b4").innerHTML=options[0].d;
   
   function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
+    myFunction();
     questionIndex++;
   if(questions[questionIndex]!=undefined){
     document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
-    button.style.backgroundColor="white";
+    //button.style.backgroundColor="white";
   });
     var questionAmount = questions.length;  //Näytetään monesko kysymys vuorossa.
     console.log(questionAmount);
@@ -86,19 +87,48 @@ document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan 
     
   }
   }
-  
+  function myFunction() {
+    console.log("testi");
+    var element1 = document.getElementById("b1");
+    element1.className = element.className.replace(/\btesti\b/g, "");
+
+    var element, name, arr;
+    element = document.getElementById("b1");
+    name = "optionButton";
+    arr = element.className.split(" ");
+    if (arr.indexOf(name) == -1) {
+      element.className += " " + name;
+    }
+  }
+  function myFunction2(e) {
+    var element1 = document.getElementById("b1");
+    element1.className = element.className.replace(/\boptionButton\b/g, "");
+
+    console.log("testi");
+    var element, name, arr;
+    element = document.getElementById(e);
+    name = "testi";
+    arr = element.className.split(" ");
+    if (arr.indexOf(name) == -1) {
+      element.className += " " + name;
+    }
+  }
   function checkAnswer(e){
     console.log(answers[questionIndex])
     console.log(e.target.innerText);
     if (e.target.innerText == answers[questionIndex]){
-      document.getElementById(e.target.id).style.backgroundColor= "rgba(36, 219, 149, 0.84)";
+      //document.getElementById(e.target.id).style.backgroundColor= "rgba(36, 219, 149, 0.84)";
       console.log("oikein");
       score++;
       console.log(score);
+      myFunction2(e.target.id);
+      //var element = document.getElementById("b1");
+      //element.className = element.className.replace(/\boptionButton\b/g, "");
     } else{
       document.getElementById(e.target.id).style.backgroundColor= "rgba(219, 45, 36, 0.84)";
-      document.getElementById("newQuestionButton").style.backgroundColor= "white";
+      //document.getElementById("newQuestionButton").style.backgroundColor= "white"; EI TARVITA
       console.log("väärin");
     }
   }
+
   

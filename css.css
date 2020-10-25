@@ -43,6 +43,7 @@ button{
 .optionButton{
     width: 8rem;
     height: 3.5rem;
+    background-color: white;
     cursor: pointer;
     border-radius: 8px;
     border: 1px solid rgba(254, 184, 22, 0.829);
@@ -52,6 +53,18 @@ button{
 #question, #questionNumber{
     text-align: center;
 }
+.testi:focus{
+    background-color: green;
+}
+.testi:active{
+    background-color: green;
+}
+.testi{
+    background-color: green;
+}
+
+    
+
 #newQuestionButton{
     margin-top: 2rem;
     width: 7.5rem;
