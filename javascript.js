@@ -2,11 +2,9 @@ document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan 
     button.addEventListener('click', checkAnswer);
   });
 document.getElementById("tryAgain").addEventListener('click', playAgain);
-  
-      //Question index kasvaa jokaisella vastauskerralla
-      //Score kasvaa, jos vastataan oikein
-    var score = 0;
-    var questionIndex = 0;
+
+    var score = 0;   //Score kasvaa, jos vastataan oikein
+    var questionIndex = 0; //Question index kasvaa jokaisella vastauskerralla
       let quiz = [
     {
       "question": "What is the capital of Spain?",
