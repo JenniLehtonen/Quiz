@@ -1,7 +1,7 @@
 ## Quiz project
 
-Used technologies: HTML, CSS, Javascript and JSON. </br>
-The questions, options and answers are stored into a JSON file. </br>
+Used technologies: HTML, CSS, Javascript and JSON. <br/>
+The questions, options and answers are stored into a JSON file. <br/>
 I have taken those questions, options and answers from a JSON file and stored them to different loops
 and the program uses those loops in order to show questions etc. When the user goes to the next question
 the indexes of the loops increase and the new question and the options shows up on the screen. After user
