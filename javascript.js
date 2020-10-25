@@ -1,6 +1,7 @@
 document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
     button.addEventListener('click', checkAnswer);
   });
+document.getElementById("tryAgain").addEventListener('click', playAgain);
   
       //Question index kasvaa jokaisella vastauskerralla
       //Score kasvaa, jos vastataan oikein
@@ -61,7 +62,7 @@ document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan 
   function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
     questionIndex++;
   if(questions[questionIndex]!=undefined){
-    document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
+    document.querySelectorAll(".optionButton").forEach(button => { 
     button.style.backgroundColor="white";
   });
     var questionAmount = questions.length;  //Näytetään monesko kysymys vuorossa.
@@ -83,6 +84,7 @@ document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan 
     }
     document.getElementById("score").style.display = "block";
     document.getElementById("score").innerHTML = "Your score is: " + score;
+    document.getElementById("tryAgain").style.display = "block";
     }
   }
 
@@ -99,6 +101,28 @@ document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan 
       document.getElementById("newQuestionButton").style.backgroundColor= "white";
       console.log("väärin");
     }
+  }
+
+  function playAgain(){
+    document.getElementById("score").style.display = "none";
+    document.getElementById("tryAgain").style.display = "none";
+    score = 0;
+    questionIndex = 0;
+    var x = document.getElementsByClassName("questionAndOptions");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "block";
+    }
+    document.querySelectorAll(".optionButton").forEach(button => { 
+      button.style.backgroundColor="white";
+    });
+    document.getElementById("questionNumber").innerHTML = "1 of " + questions.length;
+    document.getElementById("question").innerHTML=questions[0];
+
+    document.getElementById("b1").innerHTML=options[0].a;  
+    document.getElementById("b2").innerHTML=options[0].b;
+    document.getElementById("b3").innerHTML=options[0].c;
+    document.getElementById("b4").innerHTML=options[0].d;
   }
 
   
