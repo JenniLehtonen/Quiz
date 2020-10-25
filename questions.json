@@ -1,0 +1,20 @@
+{
+    "questions":
+      [
+        {
+        "Question":"What is the capital of Spain?",
+        "Answer":"Madrid",
+        "Options":"sportPictures/tennis.jpg"
+        },
+        {
+        "Question":"What is the capital of Switzerland?",
+        "Answer":"Bern",
+        "Options":"sportPictures/archery.jpg"
+        },	
+        {
+        "Question":"What is the capital of The United States?",
+        "Answer":"Washington DC",
+        "Options":"sportPictures/swimming.jpg"
+        }
+      ]  
+    }

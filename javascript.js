@@ -45,10 +45,11 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     answers.push(quiz[i].answer);
     options.push(quiz[i].options);
   }
+  /*  POISTA NÄMÄ
   console.log(quiz[0]);
   console.log(questions[0]);
   console.log(answers);
-  console.log(options);
+  console.log(options);*/
   
   document.getElementById("question").innerHTML=questions[0];  //show the question
   

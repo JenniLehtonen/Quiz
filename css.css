@@ -68,7 +68,6 @@ button{
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
-}
 #question, #questionNumber{
     text-align: center;
 }
@@ -81,9 +80,6 @@ button{
 .testi{
     background-color: green;
 }
-
-    
-
 #newQuestionButton{
     margin-top: 2rem;
     width: 7.5rem;
