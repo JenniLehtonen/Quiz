@@ -60,12 +60,13 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
   
   function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
     questionIndex++;
+
   if(questions[questionIndex]!=undefined){
     document.querySelectorAll(".optionButton").forEach(button => { 
     button.style.backgroundColor="white";
   });
     var questionAmount = questions.length;  //Näytetään monesko kysymys vuorossa.
-    console.log(questionAmount);
+
     document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of " + questions.length;
   
     console.log("QuestionIndex: " + questionIndex);
@@ -75,6 +76,7 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     document.getElementById("b2").innerHTML=options[questionIndex].b;
     document.getElementById("b3").innerHTML=options[questionIndex].c;
     document.getElementById("b4").innerHTML=options[questionIndex].d;
+    
     } else{
     var x = document.getElementsByClassName("questionAndOptions");
     var i;
@@ -107,6 +109,7 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     document.getElementById("tryAgain").style.display = "none";
     score = 0;
     questionIndex = 0;
+    console.log(questionIndex);
     var x = document.getElementsByClassName("questionAndOptions");
     var i;
     for (i = 0; i < x.length; i++) {
