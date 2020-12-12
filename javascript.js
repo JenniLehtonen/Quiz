@@ -1,3 +1,17 @@
+function loadJSON() {
+  $.ajax({
+           url: 'questions.json',
+     cache: false
+   }).done(function(data) {
+       console.log("done");
+       console.log(data); 
+       console.log(data.questions[0].Options.a)  //KÄYTÄ TÄTÄ HYÖDYKSI   
+   }).fail(function() {
+       console.log("error");
+   }).always(function() {
+       console.log("complete");
+   });
+}
 document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
     button.addEventListener('click', checkAnswer);
   });

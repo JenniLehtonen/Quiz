@@ -4,17 +4,18 @@
         {
         "Question":"What is the capital of Spain?",
         "Answer":"Madrid",
-        "Options":"sportPictures/tennis.jpg"
+        "Options": {
+          "a": "Madrid",
+          "b": "Testi1"
+        }
         },
         {
         "Question":"What is the capital of Switzerland?",
-        "Answer":"Bern",
-        "Options":"sportPictures/archery.jpg"
+        "Answer":"Bern"
         },	
         {
         "Question":"What is the capital of The United States?",
-        "Answer":"Washington DC",
-        "Options":"sportPictures/swimming.jpg"
+        "Answer":"Washington DC"
         }
       ]  
     }
