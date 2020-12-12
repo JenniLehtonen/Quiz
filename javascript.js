@@ -1,25 +1,14 @@
-function loadJSON() {
-  $.ajax({
-           url: 'questions.json',
-     cache: false
-   }).done(function(data) {
-       console.log("done");
-       console.log(data); 
-       console.log(data.questions[0].Options.a)  //KÄYTÄ TÄTÄ HYÖDYKSI   
-   }).fail(function() {
-       console.log("error");
-   }).always(function() {
-       console.log("complete");
-   });
-}
+
 document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
     button.addEventListener('click', checkAnswer);
   });
 document.getElementById("tryAgain").addEventListener('click', playAgain);
 
+
     var score = 0;   //Score kasvaa, jos vastataan oikein
     var questionIndex = 0; //Question index kasvaa jokaisella vastauskerralla
-      let quiz = [
+
+   /* let quiz = [
     {
       "question": "What is the capital of Spain?",
       "answer": "Madrid",
@@ -27,7 +16,7 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
               a: 'Madrid',
               b: 'Barcelona',
               c: 'Malaga',
-        d: 'Toledo'
+              d: 'Toledo'
           }
     },
     {
@@ -37,7 +26,7 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
               a: 'Bern',
               b: 'Zürich',
               c: 'Basel',
-        d: 'Luzern'
+              d: 'Luzern'
           }
     },
     {
@@ -47,10 +36,11 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
               a: 'New York',
               b: 'Washington DC',
               c: 'Los Angeles',
-        d: 'Miami'
+              d: 'Miami'
           }
     }
-    ]
+    ]*/
+    console.log(quiz);
     var questions = [];
     var answers = [];
     var options = [];

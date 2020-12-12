@@ -2,20 +2,34 @@
     "questions":
       [
         {
-        "Question":"What is the capital of Spain?",
-        "Answer":"Madrid",
-        "Options": {
+        "question":"What is the capital of Spain?",
+        "answer":"Madrid",
+        "options": {
           "a": "Madrid",
-          "b": "Testi1"
+          "b": "Barcelona",
+          "c": "Malaga",
+          "d": "Toledo"
         }
         },
         {
-        "Question":"What is the capital of Switzerland?",
-        "Answer":"Bern"
+        "question":"What is the capital of Switzerland?",
+        "answer":"Bern",
+        "options": { 
+          "a": "Bern",
+          "b": "Zürich",
+          "c": "Basel",
+          "d": "Luzern"
+        }
         },	
         {
-        "Question":"What is the capital of The United States?",
-        "Answer":"Washington DC"
+        "question":"What is the capital of The United States?",
+        "answer":"Washington DC",
+        "options": {
+          "a": "New York",
+          "b": "Washington DC",
+          "c": "Los Angeles",
+          "d": "Miami"
+      }
         }
       ]  
     }
