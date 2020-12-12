@@ -8,39 +8,6 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     var score = 0;   //Score kasvaa, jos vastataan oikein
     var questionIndex = 0; //Question index kasvaa jokaisella vastauskerralla
 
-   /* let quiz = [
-    {
-      "question": "What is the capital of Spain?",
-      "answer": "Madrid",
-      "options": {
-              a: 'Madrid',
-              b: 'Barcelona',
-              c: 'Malaga',
-              d: 'Toledo'
-          }
-    },
-    {
-      "question": "What is the capital of Switzerland?",
-      "answer": "Bern",
-      "options": {
-              a: 'Bern',
-              b: 'Zürich',
-              c: 'Basel',
-              d: 'Luzern'
-          }
-    },
-    {
-      "question": "What is the capital of The United States?",
-      "answer": "Washington DC",
-      "options": {
-              a: 'New York',
-              b: 'Washington DC',
-              c: 'Los Angeles',
-              d: 'Miami'
-          }
-    }
-    ]*/
-    console.log(quiz);
     var questions = [];
     var answers = [];
     var options = [];
@@ -49,11 +16,6 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     answers.push(quiz[i].answer);
     options.push(quiz[i].options);
   }
-  /*  POISTA NÄMÄ
-  console.log(quiz[0]);
-  console.log(questions[0]);
-  console.log(answers);
-  console.log(options);*/
   
   document.getElementById("question").innerHTML=questions[0];  //show the question
   
@@ -69,7 +31,6 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     document.querySelectorAll(".optionButton").forEach(button => { 
     button.style.backgroundColor="white";
   });
-    var questionAmount = questions.length;  //Näytetään monesko kysymys vuorossa.
 
     document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of " + questions.length;
   
