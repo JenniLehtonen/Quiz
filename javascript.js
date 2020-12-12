@@ -1,12 +1,12 @@
 
-document.querySelectorAll(".optionButton").forEach(button => {  //kun painetaan vastausvaihtoehtoa, tutkitaan, onko vastaus oikein
+document.querySelectorAll(".optionButton").forEach(button => {  // when the user clicks some answer, checkAnswer function is called and it checks if the user has chosen the correct answer
     button.addEventListener('click', checkAnswer);
   });
 document.getElementById("tryAgain").addEventListener('click', playAgain);
 
 
-    var score = 0;   //Score kasvaa, jos vastataan oikein
-    var questionIndex = 0; //Question index kasvaa jokaisella vastauskerralla
+    var score = 0;   //The score increases if the user chooses a correct answer
+    var questionIndex = 0; 
 
     var questions = [];
     var answers = [];
@@ -24,8 +24,8 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
   document.getElementById("b3").innerHTML=options[0].c;
   document.getElementById("b4").innerHTML=options[0].d;
   
-  function newQuestion(){ //tässä questionIndex kasvaa, kun painetaan vastausvaihtoehtoa --> kysymys vaihtuu
-    questionIndex++;
+  function newQuestion(){ 
+    questionIndex++; //The question index increases when the user clicks "New question" button --> The question changes
 
   if(questions[questionIndex]!=undefined){
     document.querySelectorAll(".optionButton").forEach(button => { 
@@ -33,16 +33,14 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
   });
 
     document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of " + questions.length;
-  
-    console.log("QuestionIndex: " + questionIndex);
-    document.getElementById("question").innerHTML=questions[questionIndex]; //MIKÄ TÄMÄ ON?
+    document.getElementById("question").innerHTML=questions[questionIndex]; //Shows the questions
   
     document.getElementById("b1").innerHTML=options[questionIndex].a;  
     document.getElementById("b2").innerHTML=options[questionIndex].b;
     document.getElementById("b3").innerHTML=options[questionIndex].c;
     document.getElementById("b4").innerHTML=options[questionIndex].d;
     
-    } else{
+    } else{  //When there are no questions left, question and answer buttons are hidden and the results and try again button are shown
     var x = document.getElementsByClassName("questionAndOptions");
     var i;
     for (i = 0; i < x.length; i++) {
