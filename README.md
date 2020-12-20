@@ -1,6 +1,6 @@
 ## Quiz project
 
-Used technologies: HTML, CSS and JavaScript.
+Used technologies: **HTML, CSS and JavaScript**.
 
 The questions, options and answers are stored into a separate JavaScript file.
 
