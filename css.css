@@ -92,15 +92,6 @@ button{
 #question, #questionNumber{
     text-align: center;
 }
-.testi:focus{ /*TARKISTA NÄMÄ*/
-    background-color: green;
-}
-.testi:active{
-    background-color: green;
-}
-.testi{
-    background-color: green;
-}
 #newQuestionButton{
     margin-top: 2rem;
     width: 7.5rem;
