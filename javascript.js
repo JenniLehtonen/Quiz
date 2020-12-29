@@ -69,8 +69,6 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
   }
 
   function checkAnswer(e){
-    console.log(answers[questionIndex])
-    console.log(e.target.innerText);
     if (e.target.innerText == answers[questionIndex]){
       var element = document.getElementById(e.target.id);
       element.classList.remove("optionButton");
@@ -89,7 +87,6 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     document.getElementById("tryAgain").style.display = "none"; //hide "try again" button
     score = 0;
     questionIndex = 0;
-    console.log(questionIndex);
     var x = document.getElementsByClassName("questionAndOptions"); //show question and options again
     var i;
     for (i = 0; i < x.length; i++) {
