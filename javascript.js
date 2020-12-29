@@ -26,13 +26,13 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
   
   function newQuestion(){ 
     questionIndex++; //The question index increases when the user clicks "New question" button --> The question changes
-    if(questionIndex > 3) {
+    if(questionIndex > 3) { //If there is the last question, change button text to "Show the result"
       document.getElementById("newQuestionButton").innerHTML="Show the result";
-  }
-  if(questions[questionIndex]!=undefined){
-    document.querySelectorAll(".optionButton").forEach(button => { 
-    button.style.backgroundColor="white";
-  });
+    }
+    if(questions[questionIndex]!=undefined){
+      document.querySelectorAll(".optionButton").forEach(button => { 
+      button.style.backgroundColor="white";
+    });
 
     document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of " + questions.length;
     document.getElementById("question").innerHTML=questions[questionIndex]; //Shows the questions
