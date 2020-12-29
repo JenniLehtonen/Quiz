@@ -26,7 +26,9 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
   
   function newQuestion(){ 
     questionIndex++; //The question index increases when the user clicks "New question" button --> The question changes
-
+    if(questionIndex > 3) {
+      document.getElementById("newQuestionButton").innerHTML="Show the result";
+  }
   if(questions[questionIndex]!=undefined){
     document.querySelectorAll(".optionButton").forEach(button => { 
     button.style.backgroundColor="white";
@@ -40,7 +42,11 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     document.getElementById("b3").innerHTML=options[questionIndex].c;
     document.getElementById("b4").innerHTML=options[questionIndex].d;
     
-    } else{  //When there are no questions left, question and answer buttons are hidden and the results and try again button are shown
+    } 
+    /*if(questions[questionIndex]<5) {
+        console.log("questionIndex is under 5")
+    }*/
+    else{  //When there are no questions left, question and answer buttons are hidden and the results and try again button are shown
     var x = document.getElementsByClassName("questionAndOptions");
     var i;
     for (i = 0; i < x.length; i++) {
@@ -68,6 +74,7 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
   }
 
   function playAgain(){
+    document.getElementById("newQuestionButton").innerHTML="New question";
     document.getElementById("score").style.display = "none";
     document.getElementById("tryAgain").style.display = "none";
     score = 0;
