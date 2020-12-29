@@ -34,17 +34,17 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
       var element2 = document.getElementById("b2");
       var element3 = document.getElementById("b3");
       var element4 = document.getElementById("b4");
-      element1.classList.remove("oikein");
-      element1.classList.remove("väärin");
+      element1.classList.remove("correctAnswer");
+      element1.classList.remove("wrongAnswer");
       element1.classList.add("optionButton");
-      element2.classList.remove("oikein");
-      element2.classList.remove("väärin");
+      element2.classList.remove("correctAnswer");
+      element2.classList.remove("wrongAnswer");
       element2.classList.add("optionButton");
-      element3.classList.remove("oikein");
-      element3.classList.remove("väärin");
+      element3.classList.remove("correctAnswer");
+      element3.classList.remove("wrongAnswer");
       element3.classList.add("optionButton");
-      element4.classList.remove("oikein");
-      element4.classList.remove("väärin");
+      element4.classList.remove("correctAnswer");
+      element4.classList.remove("wrongAnswer");
       element4.classList.add("optionButton");
 
     document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of " + questions.length;
@@ -74,14 +74,14 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     if (e.target.innerText == answers[questionIndex]){
       var element = document.getElementById(e.target.id);
       element.classList.remove("optionButton");
-      element.classList.add("oikein");
+      element.classList.add("correctAnswer");
       console.log("oikein");
       score++;
       console.log(score);
     } else{
       var element = document.getElementById(e.target.id);
       element.classList.remove("optionButton");
-      element.classList.add("väärin");
+      element.classList.add("wrongAnswer");
       console.log("väärin");
     }
   }
@@ -103,17 +103,17 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
       var element2 = document.getElementById("b2");
       var element3 = document.getElementById("b3");
       var element4 = document.getElementById("b4");
-      element1.classList.remove("oikein");
-      element1.classList.remove("väärin");
+      element1.classList.remove("wrongAnswer");
+      element1.classList.remove("correctAnswer");
       element1.classList.add("optionButton");
-      element2.classList.remove("oikein");
-      element2.classList.remove("väärin");
+      element2.classList.remove("wrongAnswer");
+      element2.classList.remove("correctAnswer");
       element2.classList.add("optionButton");
-      element3.classList.remove("oikein");
-      element3.classList.remove("väärin");
+      element3.classList.remove("wrongAnswer");
+      element3.classList.remove("correctAnswer");
       element3.classList.add("optionButton");
-      element4.classList.remove("oikein");
-      element4.classList.remove("väärin");
+      element4.classList.remove("wrongAnswer");
+      element4.classList.remove("correctAnswer");
       element4.classList.add("optionButton");
 
     document.getElementById("questionNumber").innerHTML = "1 of " + questions.length;

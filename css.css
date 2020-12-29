@@ -30,7 +30,7 @@ body{
 button{
     background-color:white;
 }
-.väärin{
+.wrongAnswer{
     width: 8rem;
     height: 3.5rem;
     background-color:red;
@@ -40,7 +40,7 @@ button{
     font-weight: 550;
     transition-duration: 0.4s;
 }
-.oikein{
+.correctAnswer{
     width: 8rem;
     height: 3.5rem;
     background-color:green;
@@ -89,6 +89,12 @@ button{
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
+#tryAgain:focus{ 
+    background-color: rgba(254, 184, 22, 0.829); 
+}
+#tryAgain:hover{ 
+    background-color: rgba(254, 184, 22, 0.829); 
+}
 #question, #questionNumber{
     text-align: center;
 }
@@ -102,14 +108,16 @@ button{
     border: 1px solid rgba(254, 184, 22, 0.829);
     transition-duration: 0.4s;
 }
-#newQuestionButton:hover{  /*EI TOIMI EKAN SIVUN JÄLKEEN JA EKALLA SIVULLA VAIN JOS MADRID ON KLIKATTU*/
-    background-color: rgba(254, 184, 22, 0.829);
-    
+#newQuestionButton:focus{ 
+    background-color: rgba(254, 184, 22, 0.829); 
+}
+#newQuestionButton:hover{ 
+    background-color: rgba(254, 184, 22, 0.829); 
 }
 .optionButton:focus{
     background-color: rgb(248, 174, 2);
 }
-.optionButton:hover{ /*EI TOIMI*/
+.optionButton:hover{
     background-color: rgba(254, 184, 22, 0.829);
 }
 #b1, #b2{
