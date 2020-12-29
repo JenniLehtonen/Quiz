@@ -13,9 +13,9 @@ let quiz = [
       "question": "What is the population of Australia in 2020?",
       "answer": "25 600 000",
       "options": {
-                a: '25 600 000',
-                b: '15 000 000',
-                c: '32 000 000',
+                a: '15 000 000',
+                b: '32 000 000',
+                c: '25 600 000',
                 d: '46 000 000'
           }
     },

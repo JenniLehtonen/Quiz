@@ -30,9 +30,22 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
       document.getElementById("newQuestionButton").innerHTML="Show the result";
     }
     if(questions[questionIndex]!=undefined){
-      document.querySelectorAll(".optionButton").forEach(button => { 
-      button.style.backgroundColor="white";
-    });
+      var element1 = document.getElementById("b1");
+      var element2 = document.getElementById("b2");
+      var element3 = document.getElementById("b3");
+      var element4 = document.getElementById("b4");
+      element1.classList.remove("oikein");
+      element1.classList.remove("väärin");
+      element1.classList.add("optionButton");
+      element2.classList.remove("oikein");
+      element2.classList.remove("väärin");
+      element2.classList.add("optionButton");
+      element3.classList.remove("oikein");
+      element3.classList.remove("väärin");
+      element3.classList.add("optionButton");
+      element4.classList.remove("oikein");
+      element4.classList.remove("väärin");
+      element4.classList.add("optionButton");
 
     document.getElementById("questionNumber").innerHTML = questionIndex + 1 + " of " + questions.length;
     document.getElementById("question").innerHTML=questions[questionIndex]; //Shows the questions
@@ -42,10 +55,7 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     document.getElementById("b3").innerHTML=options[questionIndex].c;
     document.getElementById("b4").innerHTML=options[questionIndex].d;
     
-    } 
-    /*if(questions[questionIndex]<5) {
-        console.log("questionIndex is under 5")
-    }*/
+    }
     else{  //When there are no questions left, question and answer buttons are hidden and the results and try again button are shown
     var x = document.getElementsByClassName("questionAndOptions");
     var i;
@@ -62,13 +72,16 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     console.log(answers[questionIndex])
     console.log(e.target.innerText);
     if (e.target.innerText == answers[questionIndex]){
-      document.getElementById(e.target.id).style.backgroundColor= "rgba(36, 219, 149, 0.84)";
+      var element = document.getElementById(e.target.id);
+      element.classList.remove("optionButton");
+      element.classList.add("oikein");
       console.log("oikein");
       score++;
       console.log(score);
     } else{
-      document.getElementById(e.target.id).style.backgroundColor= "rgba(219, 45, 36, 0.84)";
-      document.getElementById("newQuestionButton").style.backgroundColor= "white";
+      var element = document.getElementById(e.target.id);
+      element.classList.remove("optionButton");
+      element.classList.add("väärin");
       console.log("väärin");
     }
   }
@@ -85,9 +98,24 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "block";
     }
-    document.querySelectorAll(".optionButton").forEach(button => { 
-      button.style.backgroundColor="white";
-    });
+
+    var element1 = document.getElementById("b1");
+      var element2 = document.getElementById("b2");
+      var element3 = document.getElementById("b3");
+      var element4 = document.getElementById("b4");
+      element1.classList.remove("oikein");
+      element1.classList.remove("väärin");
+      element1.classList.add("optionButton");
+      element2.classList.remove("oikein");
+      element2.classList.remove("väärin");
+      element2.classList.add("optionButton");
+      element3.classList.remove("oikein");
+      element3.classList.remove("väärin");
+      element3.classList.add("optionButton");
+      element4.classList.remove("oikein");
+      element4.classList.remove("väärin");
+      element4.classList.add("optionButton");
+
     document.getElementById("questionNumber").innerHTML = "1 of " + questions.length;
     document.getElementById("question").innerHTML=questions[0];
 
