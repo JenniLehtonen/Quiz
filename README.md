@@ -11,7 +11,16 @@ has choosed the option, the program checks if the right answer is chosen and the
 the program either increases the score or not. At the end of the quiz the user sees their score and has the
 ability to try again.
 
+At the end of the documentation you can see pictures of the user interface.
+
+This is the view when the user opens the quiz.
 ![quizMainPage](quizMainPage.JPG "The main page of the quiz application")
+
+Here you can see that the application changes color depending on the answer. Here the user has chosen the correct answer so the background color of the option is green.
 ![quizCorrectAnswer](quizCorrectAnswer.JPG "How it looks like when the user clicks the correct answer")
+
+Here the user has chosen a qrong answer so the background color of the option is red.
 ![quizWrongAnswer](quizWrongAnswer.JPG "How it looks like when the user clicks a wrong answer")
+
+Here is the user sees their score and they can try again the quiz if they want to.
 ![quizShowScore](quizShowScore.JPG "The score page of the application")
