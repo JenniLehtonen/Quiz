@@ -10,3 +10,8 @@ the indexes of the loops increase and the new question and the options shows up 
 has choosed the option, the program checks if the right answer is chosen and then depending on the answer
 the program either increases the score or not. At the end of the quiz the user sees their score and has the
 ability to try again.
+
+![quizMainPage](quizMainPage.JPG "The main page of the quiz application")
+![quizCorrectAnswer](quizCorrectAnswer.JPG "How it looks like when the user clicks the correct answer")
+![quizWrongAnswer](quizWrongAnswer.JPG "How it looks like when the user clicks a wrong answer")
+![quizShowScore](quizShowScore.JPG "The score page of the application")
