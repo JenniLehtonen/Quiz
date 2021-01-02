@@ -19,8 +19,8 @@ This is the view when the user opens the quiz.
 Here you can see that the application changes color depending on the answer. Here the user has chosen the correct answer so the background color of the option is green.
 ![quizCorrectAnswer](quizCorrectAnswer.JPG "How it looks like when the user clicks the correct answer")
 
-Here the user has chosen a qrong answer so the background color of the option is red.
+Here the user has chosen a wrong answer so the background color of the option is red.
 ![quizWrongAnswer](quizWrongAnswer.JPG "How it looks like when the user clicks a wrong answer")
 
-Here is the user sees their score and they can try again the quiz if they want to.
+Here is the "last" page of the application and here the user sees their score and they can try again the quiz if they want to.
 ![quizShowScore](quizShowScore.JPG "The score page of the application")
