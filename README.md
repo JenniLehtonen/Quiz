@@ -4,7 +4,7 @@ In the application the user answers to different questions and at the end of the
 |Table of contents|
 |:------------- |
 |1. [Technical solutions of the application](#Technical-solutions-of-the-application)|
-|2. [Pictures of the user interface](#Pictures-of-the-user-interface)]|
+|2. [Pictures of the user interface](#Pictures-of-the-user-interface)|
 
 ## Technical solutions of the application
 Used technologies: **HTML, CSS and JavaScript**.
