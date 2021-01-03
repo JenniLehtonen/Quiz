@@ -1,5 +1,12 @@
 ## Quiz project
+In the application the user answers to different questions and at the end of the quiz they see their score. If the user chooses the correct answer the background color of the option turns green and if the user chooses a wrong answer it turns red.
 
+|Table of contents|
+|:------------- |
+|1. [Technical solutions of the application](#Technical-solutions-of-the-application)|
+|2. [Pictures of the user interface](#Pictures-of-the-user-interface)]|
+
+## Technical solutions of the application
 Used technologies: **HTML, CSS and JavaScript**.
 
 The questions, options and answers are stored into a separate JavaScript file.
@@ -11,7 +18,7 @@ has choosed the option, the program checks if the right answer is chosen and the
 the program either increases the score or not. At the end of the quiz the user sees their score and has the
 ability to try again.
 
-At the end of the documentation you can see pictures of the user interface.
+## Pictures of the user interface
 
 This is the view when the user opens the quiz.
 ![quizMainPage](quizMainPage.JPG "The main page of the quiz application")
