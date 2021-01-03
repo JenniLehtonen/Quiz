@@ -1,6 +1,8 @@
 ## Quiz project
 In the application the user answers to different questions and at the end of the quiz they see their score. If the user chooses the correct answer the background color of the option turns green and if the user chooses a wrong answer it turns red.
 
+You can visit the application [here](https://jennilehtonen.github.io/Quiz-project/).
+
 |Table of contents|
 |:------------- |
 |1. [Technical solutions of the application](#Technical-solutions-of-the-application)|
