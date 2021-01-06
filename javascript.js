@@ -87,22 +87,16 @@ document.getElementById("tryAgain").addEventListener('click', playAgain);
       x[i].style.display = "block";
     }
 
-    var element1 = document.getElementById("b1");
+      var element1 = document.getElementById("b1");
       var element2 = document.getElementById("b2");
       var element3 = document.getElementById("b3");
       var element4 = document.getElementById("b4");
-      element1.classList.remove("wrongAnswer"); //Remove classes "correctAnswer" and "wrongAnswer" and add the original class
-      element1.classList.remove("correctAnswer");
-      element1.classList.add("optionButton");
-      element2.classList.remove("wrongAnswer");
-      element2.classList.remove("correctAnswer");
-      element2.classList.add("optionButton");
-      element3.classList.remove("wrongAnswer");
-      element3.classList.remove("correctAnswer");
-      element3.classList.add("optionButton");
-      element4.classList.remove("wrongAnswer");
-      element4.classList.remove("correctAnswer");
-      element4.classList.add("optionButton");
+      
+      for (i = 1; i < 5; i++) { //Remove classes "correctAnswer" and "wrongAnswer" and add the original class
+        eval("element"+i).classList.remove("correctAnswer");
+        eval("element"+i).classList.remove("wrongAnswer");
+        eval("element"+i).classList.add("optionButton");
+      }
 
     document.getElementById("questionNumber").innerHTML = "1 of " + questions.length;
     document.getElementById("question").innerHTML=questions[0]; //reset the index of the questions
